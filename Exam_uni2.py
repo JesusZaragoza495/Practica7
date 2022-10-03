@@ -1,7 +1,7 @@
 
 
 def estudiantes():
-    archivo=open('Estudiantes .txt','r')
+    archivo=open('Estudiantes.txt','r')
     cadena=archivo.read()
     lista=cadena.split('\n')
     archivo.close()
@@ -26,13 +26,12 @@ def Kardex():
         con.add(tupla)
     return con
 
-print(kardex())
-
+print(Kardex())
 
 
 def materias_alum(nctrl):
     estudiante = estudiantes()
-    materias = kardex()
+    materias = Kardex()
     list = []
     ban = True
     for i in nctrl:
@@ -60,7 +59,7 @@ def materias_alum(nctrl):
     return list
 
 try:
-    datos=materias_alum([18420495])
+    datos=materias_alum([18420495,18420485])
 except Exception as error:
     print("ERROR: ", error)
 else:
